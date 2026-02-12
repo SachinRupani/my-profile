@@ -7,7 +7,7 @@ const ProfileCard = () => {
   return (
     <AppCard
       colorVariant="secondary"
-      className="flex flex-col gap-6 py-8 px-12 justify-center"
+      className="flex flex-col gap-6 py-8 px-8 md:px-12 justify-center"
     >
       {/* Image */}
       <ImageSection />
