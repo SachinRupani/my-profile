@@ -18,7 +18,7 @@ const AppCard = ({
   const colorResource = useGetAppColorResource(colorVariant);
   return (
     <div
-      className={` ${twMerge("flex flex-col bg-card rounded-xl shadow-lg gap-2 px-3 py-3", withBorder ? "border-2" : null, colorResource.borderColor, colorResource.shadowColor, className ? className : null)}`}
+      className={`${twMerge("flex flex-col bg-card rounded-xl shadow-lg gap-2 px-3 py-3", withBorder ? "border-2" : null, colorResource.borderColor, colorResource.shadowColor, className ? className : null)}`}
     >
       {children}
     </div>

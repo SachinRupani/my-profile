@@ -30,7 +30,7 @@ const BoxCard = ({
       <AppCard
         colorVariant={colorVariant}
         withBorder
-        className={`border-${borderVariant} ${displayShadow ? "shadow-lg" : "shadow-none"}`}
+        className={`${displayShadow ? "shadow-lg" : "shadow-none"} ${borderVariant === "dashed" ? "border-dashed" : ""}`}
       >
         {/* Title */}
         <AppText text={title} className="text-sm font-bold" />

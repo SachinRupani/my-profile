@@ -19,6 +19,7 @@ const LibraryInfoCard = () => {
             link="https://www.npmjs.com/package/react-native-basic-story-view"
             colorVariant="secondary"
             tags={["React Native"]}
+            borderVariant="solid"
           />
         </div>
       </HeaderAndContent>
