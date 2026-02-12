@@ -18,7 +18,7 @@ const TechBlogsCard = () => {
             description="This post is meant to share insights with the dev community, especially folks building apps that go beyond MVPs."
             link="https://dev.to/sachinrupani/designing-a-scalable-react-native-expo-router-folder-structure-3dnj"
             colorVariant="secondary"
-            tags={["React Native", "Expo"]}
+            tags={["React Native", "Expo", "Expo-Router", "TypeScript"]}
           />
 
           {/* Article 2 */}
@@ -36,7 +36,7 @@ const TechBlogsCard = () => {
             description="Simple and clean state management with jetpack compose (MVI pattern)"
             link="https://medium.com/@sachin.rupani1992/simple-and-clean-state-management-with-jetpack-compose-387d6b0e6258"
             colorVariant="secondary"
-            tags={["Jetpack Compose"]}
+            tags={["Android", "Jetpack Compose", "Kotlin"]}
           />
         </div>
       </HeaderAndContent>
