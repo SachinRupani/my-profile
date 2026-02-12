@@ -1,4 +1,6 @@
 ## A simple web application
 
-- Used Next.js and Typescript
-- Used Tailwind CSS for styling
+🌐 Website [sachin-rupani](https://sachinrupani.com/)
+
+- 🚀 Used Next.js and Typescript
+- 💡 Used Tailwind CSS for styling
