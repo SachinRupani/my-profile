@@ -1,10 +1,21 @@
+"use client";
+
+import {
+  fadeScaleInAnimation,
+  useFadeScaleIn,
+} from "@/animation/useFadeScaleIn";
 import BoxCard from "@/components/molecules/box-card/BoxCard";
 import CardWithContent from "@/components/templates/card-with-content/CardWithContent";
 import HeaderAndContent from "@/components/templates/header-and-content/HeaderAndContent";
 
 const TechBlogsCard = () => {
+  const { ref, isVisible } = useFadeScaleIn<HTMLDivElement>();
   return (
-    <CardWithContent colorVariant="secondary">
+    <CardWithContent
+      ref={ref}
+      colorVariant="secondary"
+      className={`${fadeScaleInAnimation.base} ${isVisible ? fadeScaleInAnimation.visible : fadeScaleInAnimation.hidden} delay-300`}
+    >
       <HeaderAndContent
         headerProps={{
           title: "Tech Blogs",

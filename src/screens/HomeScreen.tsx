@@ -1,4 +1,4 @@
-import EmpHistory from "@/components/organisms/emp-history/EmpHistory";
+import EmpHistoryCard from "@/components/organisms/emp-history-card/EmpHistoryCard";
 import LibraryInfoCard from "@/components/organisms/library-info-card/LibraryInfoCard";
 import ProfileCard from "@/components/organisms/profile-card/ProfileCard";
 import ProjectsCard from "@/components/organisms/projects-card/ProjectsCard";
@@ -11,7 +11,7 @@ export default function HomeScreen() {
       <ProfileCard />
       <SkillsCard />
       <ProjectsCard />
-      <EmpHistory />
+      <EmpHistoryCard />
       <TechBlogsCard />
       <LibraryInfoCard />
     </section>

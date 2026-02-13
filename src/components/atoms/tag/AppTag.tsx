@@ -5,9 +5,14 @@ import AppText from "../text/AppText";
 type AppTagProps = {
   title: string;
   colorVariant?: AppColorVariant;
+  fontSize?: "default" | "tiny";
 };
 
-const AppTag = ({ title, colorVariant = "primary" }: AppTagProps) => {
+const AppTag = ({
+  title,
+  colorVariant = "primary",
+  fontSize = "default",
+}: AppTagProps) => {
   const colorResource = useGetAppColorResource(colorVariant);
   return (
     <div
@@ -15,7 +20,7 @@ const AppTag = ({ title, colorVariant = "primary" }: AppTagProps) => {
     >
       <AppText
         text={title}
-        className={`text-xs font-sans font-bold ${colorResource.foreground}`}
+        className={`font-sans font-bold ${colorResource.foreground} ${fontSize === "tiny" ? "text-[0.625rem]" : "text-xs"}`}
       />
     </div>
   );
