@@ -1,10 +1,22 @@
+"use client";
+
+import {
+  fadeScaleInAnimation,
+  useFadeScaleIn,
+} from "@/animation/useFadeScaleIn";
 import AppTag from "@/components/atoms/tag/AppTag";
 import CardWithContent from "@/components/templates/card-with-content/CardWithContent";
 import HeaderAndContent from "@/components/templates/header-and-content/HeaderAndContent";
 
 const SkillsCard = () => {
+  const { ref, isVisible } = useFadeScaleIn<HTMLDivElement>();
+
   return (
-    <CardWithContent colorVariant="secondary">
+    <CardWithContent
+      ref={ref}
+      colorVariant="secondary"
+      className={`${fadeScaleInAnimation.base} ${isVisible ? fadeScaleInAnimation.visible : fadeScaleInAnimation.hidden} delay-300`}
+    >
       {/* Core Skills */}
       <HeaderAndContent
         headerProps={{

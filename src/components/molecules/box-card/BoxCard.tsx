@@ -55,7 +55,12 @@ const BoxCard = ({
         {tags && (
           <div className="flex flex-row flex-wrap gap-2 mt-1">
             {tags.map((tag) => (
-              <AppTag key={tag} title={tag} colorVariant={colorVariant} />
+              <AppTag
+                key={tag}
+                title={tag}
+                colorVariant={colorVariant}
+                fontSize="tiny"
+              />
             ))}
           </div>
         )}

@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sachin Rupani",
-  description: "Mobile App Development Engineer | React Native | Android",
+  title: "Sachin Rupani | Mobile App Developer | React Native | Android",
+  description:
+    "An enthusiastic Mobile App Engineer with 10+ years of experience building & scaling React Native, Android, and iOS applications across healthcare and enterprise domains.",
 };
 
 export default function RootLayout({
