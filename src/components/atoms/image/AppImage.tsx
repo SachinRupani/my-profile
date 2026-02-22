@@ -5,6 +5,7 @@ type AppImageProps = {
   width?: number;
   height?: number;
   className?: string;
+  altText?: string;
 };
 
 function AppImage({
@@ -12,13 +13,14 @@ function AppImage({
   width = 256,
   height = 256,
   className,
+  altText = "Picture here",
 }: AppImageProps) {
   return (
     <Image
       src={src}
       width={width}
       height={height}
-      alt="Picture of the author"
+      alt={altText}
       className={className}
     />
   );

@@ -3,16 +3,19 @@ import AppTag from "@/components/atoms/tag/AppTag";
 import AppText from "@/components/atoms/text/AppText";
 import { AppColorVariant } from "@/config/colors/AppColorResource.types";
 import Link from "next/link";
+import ScreenshotImage from "../screenshot-image/ScreenshotImage";
 
 type BoxCarProps = {
   title: string;
   description: string;
   extraDescriptionPoints?: string[];
   colorVariant?: AppColorVariant;
+  descriptionTextColorClass?: string;
   tags?: string[];
   borderVariant?: "dashed" | "solid";
   displayShadow?: boolean;
   link?: string;
+  screenshots?: string[];
 };
 
 const BoxCard = ({
@@ -23,7 +26,9 @@ const BoxCard = ({
   tags,
   borderVariant = "dashed",
   displayShadow = false,
+  descriptionTextColorClass = undefined,
   link,
+  screenshots = [],
 }: BoxCarProps) => {
   const renderCardContent = () => {
     return (
@@ -36,11 +41,14 @@ const BoxCard = ({
         <AppText text={title} className="text-sm font-bold" />
 
         {/* Description */}
-        <AppText text={description} className="text-xs text-text-2" />
+        <AppText
+          text={description}
+          className={`text-xs ${descriptionTextColorClass ? descriptionTextColorClass : "text-text-2"}`}
+        />
 
         {/* Extra Description Points */}
         {extraDescriptionPoints && (
-          <div className="grid grid-cols-1 gap-2 mt-1">
+          <div className="grid grid-cols-1 gap-2">
             {extraDescriptionPoints.map((point) => (
               <AppText
                 key={point}
@@ -54,13 +62,29 @@ const BoxCard = ({
         {/* Tags */}
         {tags && (
           <div className="flex flex-row flex-wrap gap-2 mt-1">
-            {tags.map((tag) => (
+            {tags.map((tag, index) => (
               <AppTag
-                key={tag}
+                key={`${tag}_${index}`}
                 title={tag}
                 colorVariant={colorVariant}
                 fontSize="tiny"
               />
+            ))}
+          </div>
+        )}
+
+        {/* Screenshots */}
+        {screenshots.length > 0 && (
+          <div className="mt-2 grid grid-cols-2 gap-3 md:grid-cols-3">
+            {screenshots.map((screenshot, index) => (
+              <div key={`screenshot_${index}`} className="p-0 rounded-lg">
+                <ScreenshotImage
+                  imageUrl={screenshot}
+                  altText={`Screenshot_${index + 1}`}
+                  colorVariant="primary"
+                  extraClassName="rounded-lg"
+                />
+              </div>
             ))}
           </div>
         )}

@@ -8,6 +8,7 @@ type AppCardProps = {
   colorVariant?: AppColorVariant;
   withBorder?: boolean;
   className?: string;
+  key?: string;
 } & PropsWithChildren;
 
 const AppCard = ({
@@ -15,12 +16,13 @@ const AppCard = ({
   withBorder = false,
   ref,
   className,
-
+  key,
   children,
 }: AppCardProps) => {
   const colorResource = useGetAppColorResource(colorVariant);
   return (
     <div
+      key={key}
       ref={ref}
       className={`${twMerge("flex flex-col bg-card rounded-xl shadow-lg gap-2 px-3 py-3", withBorder ? "border-2" : null, colorResource.borderColor, colorResource.shadowColor, className ? className : null)}`}
     >
