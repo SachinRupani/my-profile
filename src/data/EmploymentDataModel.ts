@@ -33,7 +33,7 @@ export const employmentData: EmploymentDataModel[] = [
   },
   {
     company: "EY GDS",
-    role: "Associated Technical Lead",
+    role: "Associate Technical Lead",
     duration: "Dec 2021 - Feb 2023 | Noida (Remote)",
     tags: ["Android", "Kotlin", "MVVM", "Clean Architecture"],
   },
