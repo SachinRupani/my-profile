@@ -22,7 +22,7 @@ const TechBlogsCard = () => {
           colorVariant: "secondary",
         }}
       >
-        <div className="gap-4 grid grid-cols-1 lg:grid-cols-2">
+        <div className="gap-4 grid grid-cols-1">
           {/* Article 1 */}
           <BoxCard
             title="Scalable React Native & Expo Folder structure"
