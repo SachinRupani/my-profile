@@ -60,6 +60,10 @@ export const projectsData: ProjectDataModel[] = [
       "A simple quick pdf web app made using next.js, hero ui and typescript",
     link: "https://quick-pdf-generate.vercel.app/",
     tags: ["Next.js", "Typescript", "Open Source", "Personal Project"],
+    screenshots: [
+      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771842184/screenshot_quick_fix_w29s96.png",
+      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771842713/new_pdf_notes_quick_pdf_yg3rky.png",
+    ],
   },
   {
     title: "Nifty Trader",
