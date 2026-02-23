@@ -19,7 +19,7 @@ const SocialInfoButtonsSection = () => {
       <IconButton
         title="Download Resume"
         iconSrc="/ic_download.svg"
-        href="https://drive.google.com/file/d/1Sqplk9ejz9_HM6Ivxr-orULPCk1kKoDZ/view?usp=sharing"
+        href="https://drive.google.com/file/d/1tQTe2TXARt9fQReb2SryIf6mYaTThACH/view?usp=drive_link"
       />
     </div>
   );
