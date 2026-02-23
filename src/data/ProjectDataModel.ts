@@ -21,9 +21,9 @@ export const projectsData: ProjectDataModel[] = [
       "Personal Project",
     ],
     screenshots: [
-      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771755018/1_Home_lu9ksl.jpg",
-      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771755026/2_Steps_wx35or.jpg",
-      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771755031/4_Routine_mm4enm.jpg",
+      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771815202/1_home_vchigv.jpg",
+      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771815212/3_steps_ld6og8.jpg",
+      "https://res.cloudinary.com/ddfzbr1fm/image/upload/v1771815216/4_cals_ahtv4c.jpg",
     ],
   },
   {
