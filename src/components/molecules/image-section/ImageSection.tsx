@@ -11,7 +11,7 @@ const ImageSection = () => {
       <AppImage
         width={180}
         height={180}
-        src={"/profile_picture_square.jpg"}
+        src={"/profile_pic.webp"}
         className="rounded-full"
       />
     </AppCard>

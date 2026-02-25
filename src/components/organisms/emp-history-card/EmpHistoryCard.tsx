@@ -7,22 +7,27 @@ import {
 import BoxCard from "@/components/molecules/box-card/BoxCard";
 import CardWithContent from "@/components/templates/card-with-content/CardWithContent";
 import HeaderAndContent from "@/components/templates/header-and-content/HeaderAndContent";
+import { AppColorVariant } from "@/config/colors/AppColorResource.types";
 import { useGetAppColorResource } from "@/config/colors/useGetAppColorResource";
 import { employmentData } from "@/data/EmploymentDataModel";
 
-const EmpHistoryCard = () => {
+type EmpHistoryCardProps = {
+  colorVariant?: AppColorVariant;
+};
+
+const EmpHistoryCard = ({ colorVariant = "primary" }: EmpHistoryCardProps) => {
   const { ref, isVisible } = useFadeScaleIn<HTMLDivElement>();
-  const { textColor } = useGetAppColorResource("secondary");
+  const { textColor } = useGetAppColorResource(colorVariant);
   return (
     <CardWithContent
       ref={ref}
-      colorVariant="primary"
+      colorVariant={colorVariant}
       className={`${fadeScaleInAnimation.base} ${isVisible ? fadeScaleInAnimation.visible : fadeScaleInAnimation.hidden} delay-500`}
     >
       <HeaderAndContent
         headerProps={{
           title: "Employment History",
-          colorVariant: "primary",
+          colorVariant: colorVariant,
         }}
       >
         <div className="gap-6 grid grid-cols-1">
@@ -34,7 +39,7 @@ const EmpHistoryCard = () => {
               descriptionTextColorClass={textColor}
               extraDescriptionPoints={[employment.duration]}
               tags={employment.tags}
-              colorVariant="primary"
+              colorVariant={colorVariant}
               borderVariant="dashed"
             />
           ))}

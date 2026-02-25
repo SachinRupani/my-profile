@@ -7,19 +7,24 @@ import {
 import BoxCard from "@/components/molecules/box-card/BoxCard";
 import CardWithContent from "@/components/templates/card-with-content/CardWithContent";
 import HeaderAndContent from "@/components/templates/header-and-content/HeaderAndContent";
+import { AppColorVariant } from "@/config/colors/AppColorResource.types";
 
-const TechBlogsCard = () => {
+type TechBlogsCardProps = {
+  colorVariant?: AppColorVariant;
+};
+
+const TechBlogsCard = ({ colorVariant = "primary" }: TechBlogsCardProps) => {
   const { ref, isVisible } = useFadeScaleIn<HTMLDivElement>();
   return (
     <CardWithContent
       ref={ref}
-      colorVariant="secondary"
+      colorVariant={colorVariant}
       className={`${fadeScaleInAnimation.base} ${isVisible ? fadeScaleInAnimation.visible : fadeScaleInAnimation.hidden} delay-300`}
     >
       <HeaderAndContent
         headerProps={{
           title: "Tech Blogs",
-          colorVariant: "secondary",
+          colorVariant: colorVariant,
         }}
       >
         <div className="gap-4 grid grid-cols-1">
@@ -28,7 +33,7 @@ const TechBlogsCard = () => {
             title="Scalable React Native & Expo Folder structure"
             description="This post is meant to share insights with the dev community, especially folks building apps that go beyond MVPs."
             link="https://dev.to/sachinrupani/designing-a-scalable-react-native-expo-router-folder-structure-3dnj"
-            colorVariant="secondary"
+            colorVariant={colorVariant}
             tags={["React Native", "Expo", "Expo-Router", "TypeScript"]}
           />
 
@@ -37,7 +42,7 @@ const TechBlogsCard = () => {
             title="Remove Transition of an item"
             description="Simple remove transition animation of an item in react native"
             link="https://dev.to/sachinrupani/simple-remove-transition-animation-in-react-native-29l3"
-            colorVariant="secondary"
+            colorVariant={colorVariant}
             tags={["React Native"]}
           />
 
@@ -46,7 +51,7 @@ const TechBlogsCard = () => {
             title="Simple and Clean State Management with Jetpack Compose"
             description="Simple and clean state management with jetpack compose (MVI pattern)"
             link="https://medium.com/@sachin.rupani1992/simple-and-clean-state-management-with-jetpack-compose-387d6b0e6258"
-            colorVariant="secondary"
+            colorVariant={colorVariant}
             tags={["Android", "Jetpack Compose", "Kotlin"]}
           />
         </div>

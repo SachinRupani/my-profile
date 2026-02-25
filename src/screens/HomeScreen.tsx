@@ -9,11 +9,11 @@ export default function HomeScreen() {
   return (
     <section className="flex-1 grid grid-cols-1 gap-8 lg:grid-cols-2">
       <ProfileCard />
-      <SkillsCard />
-      <ProjectsCard />
-      <EmpHistoryCard />
-      <TechBlogsCard />
-      <LibraryInfoCard />
+      <SkillsCard colorVariant="secondary" />
+      <ProjectsCard colorVariant="secondary" />
+      <EmpHistoryCard colorVariant="secondary" />
+      <TechBlogsCard colorVariant="primary" />
+      <LibraryInfoCard colorVariant="primary" />
     </section>
   );
 }

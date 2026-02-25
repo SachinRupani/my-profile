@@ -7,20 +7,25 @@ import {
 import BoxCard from "@/components/molecules/box-card/BoxCard";
 import CardWithContent from "@/components/templates/card-with-content/CardWithContent";
 import HeaderAndContent from "@/components/templates/header-and-content/HeaderAndContent";
+import { AppColorVariant } from "@/config/colors/AppColorResource.types";
 import { projectsData } from "@/data/ProjectDataModel";
 
-const ProjectsCard = () => {
+type ProjectsCardProps = {
+  colorVariant?: AppColorVariant;
+};
+
+const ProjectsCard = ({ colorVariant = "primary" }: ProjectsCardProps) => {
   const { ref, isVisible } = useFadeScaleIn<HTMLDivElement>();
   return (
     <CardWithContent
       ref={ref}
-      colorVariant="primary"
+      colorVariant={colorVariant}
       className={`${fadeScaleInAnimation.base} ${isVisible ? fadeScaleInAnimation.visible : fadeScaleInAnimation.hidden} delay-300`}
     >
       <HeaderAndContent
         headerProps={{
           title: "Projects",
-          colorVariant: "primary",
+          colorVariant: colorVariant,
         }}
       >
         <div className="gap-4 grid grid-cols-1">
@@ -30,7 +35,7 @@ const ProjectsCard = () => {
               title={project.title}
               description={project.description}
               link={project.link}
-              colorVariant="primary"
+              colorVariant={colorVariant}
               tags={project.tags}
               screenshots={project.screenshots}
             />
