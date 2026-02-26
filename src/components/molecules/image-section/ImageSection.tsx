@@ -6,13 +6,13 @@ const ImageSection = () => {
     <AppCard
       colorVariant="secondary"
       withBorder
-      className={`rounded-full p-8 self-center`}
+      className={`rounded-4xl p-6 self-center`}
     >
       <AppImage
         width={180}
         height={180}
-        src={"/profile_pic.webp"}
-        className="rounded-full"
+        src={"/profile_pic_v2.webp"}
+        className="rounded-4xl"
       />
     </AppCard>
   );
