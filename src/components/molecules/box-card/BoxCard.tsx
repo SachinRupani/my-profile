@@ -81,7 +81,7 @@ const BoxCard = ({
                 <ScreenshotImage
                   imageUrl={screenshot}
                   altText={`Screenshot_${index + 1}`}
-                  colorVariant="primary"
+                  colorVariant={colorVariant}
                   extraClassName="rounded-lg"
                 />
               </div>
