@@ -1,5 +1,5 @@
 "use client";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 type AppTextProps = {
   text: string;
@@ -7,11 +7,7 @@ type AppTextProps = {
 };
 
 const AppText = ({ text, className }: AppTextProps) => {
-  return (
-    <p className={`${twMerge("text-text-1 font-mono text-base", className)}`}>
-      {text}
-    </p>
-  );
+  return <p className={cn("text-base text-text-1", className)}>{text}</p>;
 };
 
 export default AppText;
