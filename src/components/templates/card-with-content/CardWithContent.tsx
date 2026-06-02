@@ -1,5 +1,6 @@
 import AppCard from "@/components/atoms/card/AppCard";
 import { AppColorVariant } from "@/config/colors/AppColorResource.types";
+import { cn } from "@/lib/utils";
 import { PropsWithChildren, Ref } from "react";
 
 type CardWithContentProps = {
@@ -18,7 +19,7 @@ const CardWithContent = ({
     <AppCard
       ref={ref}
       colorVariant={colorVariant}
-      className={`gap-6 pb-6 ${className ? className : null}`}
+      className={cn("gap-6 p-5 sm:p-6", className)}
     >
       {children}
     </AppCard>

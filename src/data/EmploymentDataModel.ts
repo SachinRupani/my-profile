@@ -7,6 +7,19 @@ export interface EmploymentDataModel {
 
 export const employmentData: EmploymentDataModel[] = [
   {
+    company: "EY India",
+    role: "Manager (Technology Consulting)",
+    duration: "Mar 2026 - Present | Hyderabad (Hybrid)",
+    tags: [
+      "React Native",
+      "Typescript",
+      "Micro-Frontend",
+      "Fintech",
+      "Agile",
+      "Problem Solving",
+    ],
+  },
+  {
     company: "Vayuz Technologies (Code & Theory Team - Tonies Project)",
     role: "Sr. Product Engineer",
     duration: "Sep 2025 - Feb 2026 | Bengaluru (Remote)",
@@ -18,12 +31,6 @@ export const employmentData: EmploymentDataModel[] = [
       "Tan Stack Query",
       "Storybook",
     ],
-  },
-  {
-    company: "PWC Acceleration Center India",
-    role: "Lead Software Engineer",
-    duration: "Jun 2025 - Aug 2025 | Bengaluru (Hybrid)",
-    tags: ["React.js", "Typescript", "Salesforce", "Vite"],
   },
   {
     company: "Lupin Digital Health",

@@ -7,13 +7,17 @@ import TechBlogsCard from "@/components/organisms/tech-blogs-card/TechBlogsCard"
 
 export default function HomeScreen() {
   return (
-    <section className="flex-1 grid grid-cols-1 gap-8 lg:grid-cols-2">
-      <ProfileCard />
-      <SkillsCard colorVariant="secondary" />
-      <ProjectsCard colorVariant="secondary" />
-      <EmpHistoryCard colorVariant="secondary" />
-      <TechBlogsCard colorVariant="primary" />
-      <LibraryInfoCard colorVariant="primary" />
+    <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-8">
+      <div>
+        <ProfileCard />
+      </div>
+      <div className="grid grid-cols-1 gap-6">
+        <SkillsCard colorVariant="secondary" />
+        <ProjectsCard colorVariant="primary" />
+        <EmpHistoryCard colorVariant="secondary" />
+        <TechBlogsCard colorVariant="primary" />
+        <LibraryInfoCard colorVariant="primary" />
+      </div>
     </section>
   );
 }

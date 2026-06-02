@@ -1,6 +1,7 @@
+import { Badge } from "@/components/ui/badge";
 import { AppColorVariant } from "@/config/colors/AppColorResource.types";
 import { useGetAppColorResource } from "@/config/colors/useGetAppColorResource";
-import AppText from "../text/AppText";
+import { cn } from "@/lib/utils";
 
 type AppTagProps = {
   title: string;
@@ -15,14 +16,18 @@ const AppTag = ({
 }: AppTagProps) => {
   const colorResource = useGetAppColorResource(colorVariant);
   return (
-    <div
-      className={`flex flex-row rounded-2xl py-2 px-3 items-center justify-center ${colorResource.background}`}
+    <Badge
+      variant={colorVariant === "primary" ? "default" : "secondary"}
+      className={cn(
+        "rounded-md px-3 py-1.5 font-sans font-semibold tracking-normal",
+        colorResource.background,
+        colorResource.foreground,
+        colorResource.borderColor,
+        fontSize === "tiny" ? "text-[0.675rem]" : "text-xs",
+      )}
     >
-      <AppText
-        text={title}
-        className={`font-sans font-bold ${colorResource.foreground} ${fontSize === "tiny" ? "text-[0.625rem]" : "text-xs"}`}
-      />
-    </div>
+      {title}
+    </Badge>
   );
 };
 
