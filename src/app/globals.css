@@ -194,3 +194,12 @@ body::before {
   background: rgba(56, 189, 248, 0.35);
   color: var(--foreground);
 }
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}

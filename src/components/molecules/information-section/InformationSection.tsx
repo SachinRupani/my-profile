@@ -21,11 +21,12 @@ const InformationSection = () => {
       {/* Designation */}
       <AppText
         text="An enthusiastic Mobile App Engineer with 10+ years of experience building & scaling React Native, Android, and iOS applications across healthcare and enterprise domains."
-        className="max-w-xl text-center text-xs font-medium leading-7 text-text-3 sm:text-base lg:text-xs lg:leading-6 xl:text-sm xl:leading-7"
+        className="max-w-xl text-center text-xs font-medium leading-6 text-text-3 sm:text-base lg:text-xs lg:leading-6 xl:text-xs xl:leading-7"
       />
 
-      <div className="grid w-full max-w-md grid-cols-3 gap-2 pt-1">
-        <div className="rounded-lg border border-border/70 bg-white/50 p-3 text-center shadow-sm backdrop-blur dark:bg-white/[0.04] lg:p-2.5 xl:p-3">
+      {/* Highlight Info */}
+      <div className="grid w-full max-w-md grid-cols-3 gap-2 mt-1">
+        <div className="rounded-lg border border-border/70 bg-white/50 p-3 text-center shadow-sm backdrop-blur dark:bg-white/4 lg:p-2.5 xl:p-3">
           <p className="text-lg font-black text-foreground lg:text-base xl:text-lg">
             10+
           </p>
@@ -51,7 +52,7 @@ const InformationSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-2 mt-1">
         <Badge
           variant="secondary"
           className="border-primary/30 bg-primary/10 text-primary-700 dark:text-primary-900"
